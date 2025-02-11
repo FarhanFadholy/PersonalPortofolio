@@ -106,7 +106,7 @@ section {
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
     cursor: pointer;
-    border-radius: 35%;
+    border-radius: 7%;
     margin-right: 20px;
 }
 
@@ -114,7 +114,7 @@ section {
     text-decoration: none;
 }
 
-.ac_btn:hover {
+/* .ac_btn:hover {
     box-shadow: 8px 8px 0px var(--text-color), -8px -8px 0px var(--text-color);
 }
 
@@ -133,7 +133,7 @@ section {
 
 .ac_btn:hover .four {
     transform: translate3d(0px, 0px, 0px);
-}
+} */
 
 .ac_btn .ring {
     width: 100%;
@@ -146,7 +146,7 @@ section {
 }
 
 .ac_btn .one {
-    background-color: #000;
+    background-color: #c4b9b9;
     transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
     z-index: -3;
     z-index: -4;
@@ -170,9 +170,9 @@ section {
     color: var(--primary-color);
 }
 
-#button_h:hover {
+/* #button_h:hover {
     color: var(--primary-color)
-}
+} */
 
 .intro_sec .h_bg-image .block {
     bottom: 50vh;
