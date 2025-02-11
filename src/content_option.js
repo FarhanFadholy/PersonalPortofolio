@@ -11,15 +11,15 @@ const introdata = {
     animated: {
         first: "I love coding",
         second: "I code cool websites",
-        third: "I develop mobile apps",
+        third: "Everyday Coding",
     },
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
+    description: "Junior Front-End Developer",
     your_img_url:profileImg,
 };
 
 const dataabout = {
-    title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    title: "a bit about my self",
+    aboutme: "Seorang mahasiswa jurusan informatika di Universita Teknologi Digital Indonesia.",
 };
 const worktimeline = [{
         jobtitle: "Designer of week",
@@ -38,24 +38,25 @@ const worktimeline = [{
     },
 ];
 
-const skills = [{
-        name: "Python",
-        value: 90,
-    },
-    {
-        name: "Djano",
-        value: 85,
-    },
+const skills = [
+    // {
+    //     name: "Python",
+    //     value: 90,
+    // },
+    // {
+    //     name: "Djano",
+    //     value: 85,
+    // },
     {
         name: "Javascript",
-        value: 80,
+        value: 50,
     },
     {
         name: "React",
-        value: 60,
+        value: 50,
     },
     {
-        name: "Jquery",
+        name: "Java",
         value: 85,
     },
 ];
