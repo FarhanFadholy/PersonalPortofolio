@@ -254,7 +254,7 @@ function CursorCore({
     const styles = {
       cursorInner: {
         zIndex: 999,
-        display: 'block',
+        display: 'none',
         position: 'fixed',
         borderRadius: '50%',
         width: innerSize,
@@ -266,7 +266,7 @@ function CursorCore({
       },
       cursorOuter: {
         zIndex: 999,
-        display: 'block',
+        display: 'none',
         position: 'fixed',
         borderRadius: '50%',
         pointerEvents: 'none',
@@ -280,7 +280,7 @@ function CursorCore({
     }
   
     // Hide / Show global cursor
-    document.body.style.cursor = 'none'
+    document.body.style.cursor = 'auto'
   
     return (
       <React.Fragment>

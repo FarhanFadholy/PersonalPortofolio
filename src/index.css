@@ -4,8 +4,8 @@
     --secondary-color: #fff;
     --text-color: #fff;
     --text-color-2: #fff;
-    --text-color-3: rgb(204, 0, 0);
-    --overlay-color: rgb(12 12 12 / 63%);
+    /* --text-color-3: rgb(204, 0, 0); */
+    /* --overlay-color: rgb(12 12 12 / 63%); */
 }
 
 [data-theme="light"] {
@@ -15,7 +15,7 @@
     --text-color: #000;
     --text-color-2: #000;
     --text-color-3: rgb(204, 0, 0);
-    --overlay-color: rgb(255 255 255 / 70%);
+    /* --overlay-color: rgb(255 255 255 / 70%); */
 }
 
 html,
@@ -74,18 +74,18 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.cursor__dot div {
+/* .cursor__dot div {
     z-index: 999999 !important;
 }
 
-.cursor__dot div:last-child {
-    background-color: var(--text-color-3) !important;
-}
+    .cursor__dot div:last-child {
+        background-color: var(--text-color-3) !important;
+    }
 
 .cursor__dot div:first-child {
     filter: invert(1);
     background-color: var(--overlay-color) !important;
-}
+} */
 
 .color_pr {
     color: var(--primary-color) !important;
