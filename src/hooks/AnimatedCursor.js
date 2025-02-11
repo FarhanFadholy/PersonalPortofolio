@@ -87,7 +87,7 @@ function useEventListener(eventName, handler, element = document) {
  * @param {array}  clickables - array of clickable selectors
  *
  */
-function CursorCore({
+  function CursorCore({
     outerStyle,
     innerStyle,
     color = '220, 90, 90',
@@ -111,185 +111,135 @@ function CursorCore({
       '.link'
     ]
   }) {
-    const cursorOuterRef = useRef()
-    const cursorInnerRef = useRef()
-    const requestRef = useRef()
-    const previousTimeRef = useRef()
-    const [coords, setCoords] = useState({ x: 0, y: 0 })
-    const [isVisible, setIsVisible] = useState(false)
-    const [isActive, setIsActive] = useState(false)
-    const [isActiveClickable, setIsActiveClickable] = useState(false)
-    let endX = useRef(0)
-    let endY = useRef(0)
+    const cursorOuterRef = useRef();
+    const cursorInnerRef = useRef();
+    const requestRef = useRef();
+    const previousTimeRef = useRef();
+    const [coords, setCoords] = useState({ x: 0, y: 0 });
+    const [isVisible, setIsVisible] = useState(true); // Always true
+    const [isActive, setIsActive] = useState(false);
+    const [isActiveClickable, setIsActiveClickable] = useState(false);
+    let endX = useRef(0);
+    let endY = useRef(0);
   
-    /**
-     * Primary Mouse move event
-     * @param {number} clientX - MouseEvent.clientx
-     * @param {number} clientY - MouseEvent.clienty
-     */
+    // Mouse move event
     const onMouseMove = useCallback(({ clientX, clientY }) => {
-      setCoords({ x: clientX, y: clientY })
-      cursorInnerRef.current.style.top = `${clientY}px`
-      cursorInnerRef.current.style.left = `${clientX}px`
-      endX.current = clientX
-      endY.current = clientY
-    }, [])
+      setCoords({ x: clientX, y: clientY });
+      cursorInnerRef.current.style.top = `${clientY}px`;
+      cursorInnerRef.current.style.left = `${clientX}px`;
+      endX.current = clientX;
+      endY.current = clientY;
+    }, []);
   
-    // Outer Cursor Animation Delay
+    // Outer cursor animation
     const animateOuterCursor = useCallback(
       (time) => {
         if (previousTimeRef.current !== undefined) {
-          coords.x += (endX.current - coords.x) / trailingSpeed
-          coords.y += (endY.current - coords.y) / trailingSpeed
-          cursorOuterRef.current.style.top = `${coords.y}px`
-          cursorOuterRef.current.style.left = `${coords.x}px`
+          coords.x += (endX.current - coords.x) / trailingSpeed;
+          coords.y += (endY.current - coords.y) / trailingSpeed;
+          cursorOuterRef.current.style.top = `${coords.y}px`;
+          cursorOuterRef.current.style.left = `${coords.x}px`;
         }
-        previousTimeRef.current = time
-        requestRef.current = requestAnimationFrame(animateOuterCursor)
+        previousTimeRef.current = time;
+        requestRef.current = requestAnimationFrame(animateOuterCursor);
       },
-      [requestRef] // eslint-disable-line
-    )
+      [trailingSpeed, coords]
+    );
   
-    // RAF for animateOuterCursor
     useEffect(() => {
-      requestRef.current = requestAnimationFrame(animateOuterCursor)
-      return () => cancelAnimationFrame(requestRef.current)
-    }, [animateOuterCursor])
+      requestRef.current = requestAnimationFrame(animateOuterCursor);
+      return () => cancelAnimationFrame(requestRef.current);
+    }, [animateOuterCursor]);
   
-    // Mouse Events State updates
-    const onMouseDown = useCallback(() => setIsActive(true), [])
-    const onMouseUp = useCallback(() => setIsActive(false), [])
-    const onMouseEnterViewport = useCallback(() => setIsVisible(true), [])
-    const onMouseLeaveViewport = useCallback(() => setIsVisible(false), [])
+    // Mouse events
+    const onMouseDown = useCallback(() => setIsActive(true), []);
+    const onMouseUp = useCallback(() => setIsActive(false), []);
+    const onMouseEnterViewport = useCallback(() => setIsVisible(true), []);
+    const onMouseLeaveViewport = useCallback(() => setIsVisible(true), []); // Ensure cursor never hides
   
-    useEventListener('mousemove', onMouseMove)
-    useEventListener('mousedown', onMouseDown)
-    useEventListener('mouseup', onMouseUp)
-    useEventListener('mouseover', onMouseEnterViewport)
-    useEventListener('mouseout', onMouseLeaveViewport)
+    useEventListener('mousemove', onMouseMove);
+    useEventListener('mousedown', onMouseDown);
+    useEventListener('mouseup', onMouseUp);
+    useEventListener('mouseover', onMouseEnterViewport);
+    useEventListener('mouseout', onMouseLeaveViewport);
   
-    // Cursors Hover/Active State
+    // Cursor styles
     useEffect(() => {
       if (isActive) {
-        cursorInnerRef.current.style.transform = `translate(-50%, -50%) scale(${innerScale})`
-        cursorOuterRef.current.style.transform = `translate(-50%, -50%) scale(${outerScale})`
+        cursorInnerRef.current.style.transform = `translate(-50%, -50%) scale(${innerScale})`;
+        cursorOuterRef.current.style.transform = `translate(-50%, -50%) scale(${outerScale})`;
       } else {
-        cursorInnerRef.current.style.transform = 'translate(-50%, -50%) scale(1)'
-        cursorOuterRef.current.style.transform = 'translate(-50%, -50%) scale(1)'
+        cursorInnerRef.current.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursorOuterRef.current.style.transform = 'translate(-50%, -50%) scale(1)';
       }
-    }, [innerScale, outerScale, isActive])
+    }, [innerScale, outerScale, isActive]);
   
-    // Cursors Click States
+    // Visibility logic
     useEffect(() => {
-      if (isActiveClickable) {
-        cursorInnerRef.current.style.transform = `translate(-50%, -50%) scale(${
-          innerScale * 1.2
-        })`
-        cursorOuterRef.current.style.transform = `translate(-50%, -50%) scale(${
-          outerScale * 1.4
-        })`
-      }
-    }, [innerScale, outerScale, isActiveClickable])
+      cursorInnerRef.current.style.opacity = isVisible ? 1 : 1; // Always visible
+      cursorOuterRef.current.style.opacity = isVisible ? 1 : 1; // Always visible
+    }, [isVisible]);
   
-    // Cursor Visibility State
+    // Clickable elements hover logic
     useEffect(() => {
-      if (isVisible) {
-        cursorInnerRef.current.style.opacity = 1
-        cursorOuterRef.current.style.opacity = 1
-      } else {
-        cursorInnerRef.current.style.opacity = 0
-        cursorOuterRef.current.style.opacity = 0
-      }
-    }, [isVisible])
-  
-    useEffect(() => {
-      const clickableEls = document.querySelectorAll(clickables.join(','))
-  
+      const clickableEls = document.querySelectorAll(clickables.join(','));
       clickableEls.forEach((el) => {
-        el.style.cursor = 'none'
-  
+        // Hapus baris ini agar kursor bawaan tetap muncul
+        // el.style.cursor = 'none';
         el.addEventListener('mouseover', () => {
-          setIsActive(true)
-        })
-        el.addEventListener('click', () => {
-          setIsActive(true)
-          setIsActiveClickable(false)
-        })
-        el.addEventListener('mousedown', () => {
-          setIsActiveClickable(true)
-        })
-        el.addEventListener('mouseup', () => {
-          setIsActive(true)
-        })
+          setIsActive(true);
+          setIsActiveClickable(true); // Pastikan efek aktif pada elemen interaktif
+        });
         el.addEventListener('mouseout', () => {
-          setIsActive(false)
-          setIsActiveClickable(false)
-        })
-      })
-  
+          setIsActive(false);
+          setIsActiveClickable(false);
+        });
+      });
+    
       return () => {
         clickableEls.forEach((el) => {
-          el.removeEventListener('mouseover', () => {
-            setIsActive(true)
-          })
-          el.removeEventListener('click', () => {
-            setIsActive(true)
-            setIsActiveClickable(false)
-          })
-          el.removeEventListener('mousedown', () => {
-            setIsActiveClickable(true)
-          })
-          el.removeEventListener('mouseup', () => {
-            setIsActive(true)
-          })
-          el.removeEventListener('mouseout', () => {
-            setIsActive(false)
-            setIsActiveClickable(false)
-          })
-        })
-      }
-    }, [isActive, clickables])
+          el.removeEventListener('mouseover', () => setIsActive(true));
+          el.removeEventListener('mouseout', () => setIsActive(false));
+        });
+      };
+    }, [clickables]);
+    
   
-    // Cursor Styles
+    // Style for custom cursor
     const styles = {
       cursorInner: {
-        zIndex: 999,
-        display: 'none',
+        zIndex: 9999,
         position: 'fixed',
-        borderRadius: '50%',
         width: innerSize,
         height: innerSize,
-        pointerEvents: 'none',
         backgroundColor: `rgba(${color}, 1)`,
-        ...(innerStyle && innerStyle),
+        borderRadius: '50%',
+        pointerEvents: 'none', // Jangan menghalangi interaksi
         transition: 'opacity 0.15s ease-in-out, transform 0.25s ease-in-out'
       },
       cursorOuter: {
-        zIndex: 999,
-        display: 'none',
+        zIndex: 9999,
         position: 'fixed',
-        borderRadius: '50%',
-        pointerEvents: 'none',
         width: outerSize,
         height: outerSize,
         backgroundColor: `rgba(${color}, ${outerAlpha})`,
-        transition: 'opacity 0.15s ease-in-out, transform 0.15s ease-in-out',
-        willChange: 'transform',
-        ...(outerStyle && outerStyle)
+        borderRadius: '50%',
+        pointerEvents: 'none', // Jangan menghalangi interaksi
+        transition: 'opacity 0.15s ease-in-out, transform 0.15s ease-in-out'
       }
-    }
+    };    
   
-    // Hide / Show global cursor
-    document.body.style.cursor = 'auto'
+    // // Hide default cursor
+    // document.body.style.cursor = 'none';
   
     return (
       <React.Fragment>
         <div ref={cursorOuterRef} style={styles.cursorOuter} />
         <div ref={cursorInnerRef} style={styles.cursorInner} />
       </React.Fragment>
-    )
+    );
   }
-  
+    
   /**
    * AnimatedCursor
    * Calls and passes props to CursorCore if not a touch/mobile device.
