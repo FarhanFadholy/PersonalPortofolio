@@ -21,22 +21,23 @@ const dataabout = {
     title: "a bit about my self",
     aboutme: "Seorang mahasiswa jurusan informatika di Universita Teknologi Digital Indonesia.",
 };
-const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
-    },
-    {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
-    },
-    {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
-    },
-];
+
+// const worktimeline = [{
+//         jobtitle: "Designer of week",
+//         where: "YAdfi",
+//         date: "2020",
+//     },
+//     {
+//         jobtitle: "Designer of week",
+//         where: "Jamalya",
+//         date: "2019",
+//     },
+//     {
+//         jobtitle: "Designer of week",
+//         where: "ALquds",
+//         date: "2019",
+//     },
+// ];
 
 const skills = [
     // {
