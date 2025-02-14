@@ -1,10 +1,13 @@
+import profileImg from './assets/images/Farhan.jpeg';
+
+
+
 const logotext = "haaanlyf.";
 const meta = {
-    title: "Farhan F",
-    description: "I’m Farhan Fadholy data scientist _ Full stack devloper,currently working in Berlin",
-};
 
-import profileImg from './assets/images/Farhan.jpeg';
+    title: "Farhan F",
+    description: "I’m Farhan Fadholy junior front-end devloper",
+};
 
 const introdata = {
     title: "I’m Farhan Fadholy",
