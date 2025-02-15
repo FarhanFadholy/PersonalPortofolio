@@ -42,7 +42,7 @@
     width: 100%;
     transition: 0.3s ease-in-out;
     opacity: 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .po_item .content {
