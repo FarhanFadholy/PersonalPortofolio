@@ -2,6 +2,8 @@
 
 Personal portfolio simple with React. 
 
+![home](src/assets/images/porto.png)
+
 ### Features
 
 - Fully Responsive
@@ -14,7 +16,7 @@ Personal portfolio simple with React.
 
 Get the code
 
-<pre>git clone https://github.com/ubaimutl/react-portfolio.git</pre>
+<pre>git clone https://github.com/FarhanFadholy/PersonalPortofolio.git</pre>
  
 Install required dependencies
 
