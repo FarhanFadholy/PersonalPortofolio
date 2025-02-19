@@ -1,4 +1,5 @@
 .po_items_ho {
+    display: flex;
     column-width: 15em;
     -moz-column-width: 15em;
     -webkit-column-width: 15em;
@@ -78,3 +79,10 @@
 .po_item .content a:hover {
     text-decoration: none;
 }
+
+.portofolio-desc {
+    color: rgb(41, 38, 38); /* Ganti warna sesuai keinginan */
+    font-weight: bold; /* Tambahkan ketebalan */
+    font-size: 18px; /* Sesuaikan ukuran */
+  }
+  

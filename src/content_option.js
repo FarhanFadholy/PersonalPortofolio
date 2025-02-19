@@ -1,5 +1,6 @@
 import profileImg from './assets/images/Farhan.jpeg';
 import porto from './assets/images/porto.png';
+import web_bdg from './assets/images/web_bdg.png';
 
 
 const logotext = "haaanlyf.";
@@ -86,64 +87,13 @@ const services = [{
 const dataportfolio = [{
         img : porto,
         description: "My Portofolio",
-        link: "#",
+        link: "https://haanlyf-portofolio.vercel.app/", 
     },
-    // {
-    //     img: "https://picsum.photos/400/800/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/600/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/300/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/700/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-
-    // {
-    //     img: "https://picsum.photos/400/600/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/300/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/550/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/700/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
+    {
+        img : web_bdg,
+        description: "Blog Sederhan Bandung",
+        link: "http://127.0.0.1:5500/index.html", 
+    }
 ];
 
 const contactConfig = {
@@ -159,9 +109,7 @@ const contactConfig = {
 
 const socialprofils = {
     github: "https://github.com/FarhanFadholy",
-    // facebook: "https://facebook.com",
     linkedin: "https://www.linkedin.com/in/farhan-fadholy-5bb8ab295/",
-    // twitter: "https://twitter.com",
 };
 export {
     meta,
