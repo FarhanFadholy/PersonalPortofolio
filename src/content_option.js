@@ -68,21 +68,25 @@ const skills = [
         name: "Java",
         value: 85,
     },
+    {
+        name: "Flutter",
+        value: 15,
+    },
 ];
 
-const services = [{
-        title: "UI & UX Design",
-        // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Mobile Apps",
-        // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Personal Portofolio",
-        // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-];
+// const services = [{
+//         title: "UI & UX Design",
+//         // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+//     },
+//     {
+//         title: "Mobile Apps",
+//         // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+//     },
+//     {
+//         title: "Personal Portofolio",
+//         // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+//     },
+// ];
 
 const dataportfolio = [{
         img : porto,
@@ -117,7 +121,7 @@ export {
     dataportfolio,
     // worktimeline,
     skills,
-    services,
+    // services,
     introdata,
     contactConfig,
     socialprofils,
