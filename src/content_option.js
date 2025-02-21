@@ -90,7 +90,7 @@ const skills = [
 
 const dataportfolio = [{
         img : porto,
-        description: "My Portofolio",
+        description: "My Portfolio",
         link: "https://haanlyf-portofolio.vercel.app/", 
     },
     {
