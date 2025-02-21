@@ -96,7 +96,7 @@ const dataportfolio = [{
     {
         img : web_bdg,
         description: "Blog Sederhan Bandung",
-        link: "http://127.0.0.1:5500/index.html", 
+        link: "https://blog-sederhana-bdg.vercel.app/", 
     }
 ];
 
