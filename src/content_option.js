@@ -1,6 +1,7 @@
 import profileImg from './assets/images/Farhan.jpeg';
 import porto from './assets/images/porto.png';
 import web_bdg from './assets/images/web_bdg.png';
+import sertif from './assets/images/sertif.png';
 
 
 const logotext = "haaanlyf.";
@@ -91,12 +92,17 @@ const skills = [
 const dataportfolio = [{
         img : porto,
         description: "My Portfolio",
-        link: "https://haanlyf-portofolio.vercel.app/", 
+        link: "https://haanlyf-portofolio.vercel.app/",
     },
     {
         img : web_bdg,
         description: "Blog Sederhan Bandung",
-        link: "https://blog-sederhana-bdg.vercel.app/", 
+        link: "https://blog-sederhana-bdg.vercel.app/",
+    },
+    {
+        img : sertif,
+        description: "Sertifikat Web Programming dari DiCoding",
+        link: "/files/sertifikat.pdf",
     }
 ];
 
@@ -104,7 +110,7 @@ const contactConfig = {
     YOUR_EMAIL: "farhanfadholy870@gmail.com",
     YOUR_FONE: "+62 821 9522 0763",
     // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
-    // creat an emailjs.com account 
+    // creat an emailjs.com account
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_id",
     YOUR_TEMPLATE_ID: "template_id",

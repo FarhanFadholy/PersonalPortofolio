@@ -20,7 +20,7 @@ https://haanlyf-portofolio.vercel.app/
 Get the code
 
 <pre>git clone https://github.com/FarhanFadholy/PersonalPortofolio.git</pre>
- 
+
 Install required dependencies
 
 <pre>yarn install</pre>
