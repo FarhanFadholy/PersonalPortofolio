@@ -2,7 +2,7 @@ import profileImg from './assets/images/Farhan.jpeg';
 import porto from './assets/images/porto.png';
 import web_bdg from './assets/images/web_bdg.png';
 import sertif from './assets/images/sertif.png';
-
+import transfor from './assets/images/blog_transformer.png';
 
 const logotext = "haaanlyf.";
 const meta = {
@@ -101,8 +101,13 @@ const dataportfolio = [{
     },
     {
         img : sertif,
-        description: "Sertifikat Web Programming dari DiCoding",
+        description: "Sertifikat Web Programming dari Dicoding",
         link: "/files/sertifikat.pdf",
+    },
+    {
+        img : transfor,
+        description: "Blog Sejarah Transformer",
+        link: "https://farhanfadholy.github.io/blogsederhana_transformers/",
     }
 ];
 
