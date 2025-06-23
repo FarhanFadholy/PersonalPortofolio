@@ -3,6 +3,7 @@ import porto from './assets/images/porto.png';
 import web_bdg from './assets/images/web_bdg.png';
 import sertif from './assets/images/sertif.png';
 import transfor from './assets/images/blog_transformer.png';
+import sertif_js from './assets/images/sertif_js.png';
 
 const logotext = "haaanlyf.";
 const meta = {
@@ -108,6 +109,11 @@ const dataportfolio = [{
         img : transfor,
         description: "Blog Sejarah Transformer",
         link: "https://farhanfadholy.github.io/blogsederhana_transformers/",
+    },
+    {
+        img : sertif_js,
+        description: "Sertifikat Javascript",
+        link: "/files/sertifikat-JavaScript.pdf",
     }
 ];
 
