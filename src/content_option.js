@@ -56,7 +56,11 @@ const skills = [
   },
   {
     name: "Bootstrap",
-    value: 45,
+    value: 35,
+  },
+  {
+    name: "Tailwind",
+    value: 50,
   },
   {
     name: "Javascript",
@@ -73,6 +77,10 @@ const skills = [
   {
     name: "Flutter",
     value: 15,
+  },
+  {
+    name: "Git",
+    value: 80,
   },
 ];
 

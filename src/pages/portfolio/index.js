@@ -45,6 +45,7 @@ export const Portfolio = () => {
                 <img src={data.img} alt="" />
                 <div className="content">
                   <h5 className="mb-2">{data.title}</h5>
+                  <p className="portofolio-desc">{data.description}</p>
                   <a href={data.link} target="_blank" rel="noopener noreferrer">
                     view certificate
                   </a>
