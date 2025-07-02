@@ -4,6 +4,7 @@ import web_bdg from "./assets/images/web_bdg.png";
 import sertif from "./assets/images/sertif.png";
 import transfor from "./assets/images/blog_transformer.png";
 import sertif_js from "./assets/images/sertif_js.png";
+import sertif_fullstack from "./assets/images/Sertif-Fullstack.png";
 
 const logotext = "haaanlyf.";
 const meta = {
@@ -47,7 +48,7 @@ const dataabout = {
 
 const skills = [
   {
-    name: "Html",
+    name: "Html5",
     value: 90,
   },
   {
@@ -119,13 +120,17 @@ const dataportfolio = [
 const datasertifikat = [
   {
     img: sertif,
-    description: "Sertifikat Web Programming dari Dicoding",
+    description: "Sertifikat Web Programming",
     link: "/files/sertifikat.pdf",
   },
   {
     img: sertif_js,
     description: "Sertifikat Javascript",
     link: "/files/sertifikat-JavaScript`.pdf",
+  },
+  {
+    img: sertif_fullstack,
+    description: "Sertifikat FullStack Developer"
   },
 ];
 
