@@ -5,6 +5,7 @@ import sertif from "./assets/images/sertif.png";
 import transfor from "./assets/images/blog_transformer.png";
 import sertif_js from "./assets/images/sertif_js.png";
 import sertif_fullstack from "./assets/images/Sertif-Fullstack.png";
+import ino from "./assets/images/inno.png";
 
 const logotext = "haaanlyf.";
 const meta = {
@@ -114,6 +115,11 @@ const dataportfolio = [
     img: transfor,
     description: "Blog Sejarah Transformer",
     link: "https://farhanfadholy.github.io/blogsederhana_transformers/",
+  },
+  {
+    img: ino,
+    description: "InnoTech Solutions",
+    link: "https://farhanfadholy.github.io/coding-camp/",
   },
 ];
 

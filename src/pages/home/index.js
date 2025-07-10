@@ -38,23 +38,28 @@ export const Home = () => {
                   />
                 </h1>
                 <p className="mb-1x">{introdata.description}</p>
-                <div className="intro_btn-action pb-5">
-                  <Link to="/portfolio" className="text_2">
-                    <div id="button_p" className="ac_btn btn ">
-                      My Portfolio
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
+                <div className="intro_btn-action pb-5 d-flex flex-column align-items-center">
+                  <div className="d-flex justify-content-center gap-3 mb-3">
+                    <Link to="/portfolio" className="text_2">
+                      <div id="button_p" className="ac_btn btn">
+                        My Portfolio
+                      </div>
+                    </Link>
+                    <Link to="/contact">
+                      <div id="button_h" className="ac_btn btn">
+                        Contact Me
+                      </div>
+                    </Link>
+                  </div>
+                  <a
+                    href="/files/CV-FARHANFADHOLY.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div id="button_c" className="ac_btn btn">
+                      LIHAT CV
                     </div>
-                  </Link>
-                  <Link to="/contact">
-                    <div id="button_h" className="ac_btn btn">
-                      Contact Me
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
