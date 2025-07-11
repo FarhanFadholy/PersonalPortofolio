@@ -6,6 +6,7 @@ import transfor from "./assets/images/blog_transformer.png";
 import sertif_js from "./assets/images/sertif_js.png";
 import sertif_fullstack from "./assets/images/Sertif-Fullstack.png";
 import ino from "./assets/images/inno.png";
+import revou from "./assets/images/Revou.png";
 
 const logotext = "haaanlyf.";
 const meta = {
@@ -138,6 +139,10 @@ const datasertifikat = [
     img: sertif_fullstack,
     description: "Sertifikat FullStack Developer"
   },
+  {
+    img: revou,
+    description: "Sertifikat Software Engineering"
+  }
 ];
 
 const contactConfig = {
