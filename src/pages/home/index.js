@@ -52,7 +52,7 @@ export const Home = () => {
                     </Link>
                   </div>
                   <a
-                    href="/files/CV-FARHANFADHOLY.pdf"
+                    href="/files/CV-FARHAN_FADHOLY.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
